@@ -10,7 +10,7 @@ foreach (acm_test_source ${ACM_TEST_SOURCES})
 
     add_executable(${acm_test_name} EXCLUDE_FROM_ALL ${acm_test_source})
 
-    target_link_libraries(${acm_test_name} acm
+    target_link_libraries(${acm_test_name} acm_ixx
         gtest
         gmock_main)
 endforeach ()

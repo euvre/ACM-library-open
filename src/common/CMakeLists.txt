@@ -1,8 +1,10 @@
 add_subdirectory(type)
 
-add_library(acm_common OBJECT
-    "acm_except.ixx")
+file(GLOB
+    acm_common_ixx
+    CONFIGURE_DEPENDS
+    acm_except.ixx
+    ${acm_common_type_ixx})
 
-set(ALL_OBJECT_FILES
-    ${ALL_OBJECT_FILES} $<TARGET_OBJECTS:acm_common>
+set(acm_common_ixx ${acm_common_ixx} 
     PARENT_SCOPE)

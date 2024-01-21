@@ -8,10 +8,10 @@ add_subdirectory(programming_tech)
 add_subdirectory(common)
 add_subdirectory(ts)
 
-add_library(acm STATIC ${ALL_OBJECT_FILES})
+add_library(acm_ixx)
 
-set(ACM_LIBS acm_char_algorithm
-	acm_common)
-
-target_link_libraries(acm
-	${ACM_LIBS})
+target_sources(acm_ixx
+    PUBLIC
+    FILE_SET core_cxx_modules TYPE CXX_MODULES FILES
+    ${acm_char_ixx}
+    ${acm_common_ixx})
