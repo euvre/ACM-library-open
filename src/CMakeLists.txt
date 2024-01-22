@@ -14,4 +14,4 @@ target_sources(acm_ixx
     PUBLIC
     FILE_SET core_cxx_modules TYPE CXX_MODULES FILES
     ${acm_char_ixx}
-    ${acm_common_ixx})
+    ${acm_common_ixx} "char_algorithm/manacher.ixx")

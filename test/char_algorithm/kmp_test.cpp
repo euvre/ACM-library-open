@@ -10,7 +10,7 @@ import kmp;
 
 using namespace std::literals;
 
-TEST(KMP_TEST, test0) {
+TEST(kmpTEST, test0) {
     ACM::kmp m_kmp0{ "asdasdasd","asd" };
     ACM::kmp m_kmp0_0{ std::execution::seq ,"asdasdasd","asd" };
     ACM::kmp m_kmp0_1{ std::execution::par ,"asdasdasd","asd" };
@@ -39,7 +39,7 @@ TEST(KMP_TEST, test0) {
     ACM::kmp m_kmp3_3{ std::execution::par_unseq, T3,P3 };
 }
 
-TEST(KMP_TEST, test1) {
+TEST(kmpTEST, test1) {
     std::string T = "asdasdasd", P = "asd";
     ACM::kmp m_kmp{ T,P };
     std::println("T = {}\nP = {}", T, P);
@@ -66,7 +66,7 @@ TEST(KMP_TEST, test1) {
     ASSERT_EQ(std::end(exp_nxt), match_pair_nxt.in2);
 }
 
-TEST(KMP_TEST, test2) {
+TEST(kmpTEST, test2) {
     std::random_device r;
     std::default_random_engine rng(r());
     std::uniform_int_distribution uniform_dist(65, 71);// 'A'->'G'

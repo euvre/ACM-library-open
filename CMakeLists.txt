@@ -8,8 +8,7 @@ set(CMAKE_CXX_SCAN_FOR_MODULES ON)
 project(ACM
     VERSION 2023.12
     DESCRIPTION "The algorithm librarys for ACM."
-    LANGUAGES CXX
-)
+    LANGUAGES CXX)
 
 if(CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
     message("The compiler is ${CMAKE_CXX_COMPILER_ID}.")
